@@ -64,16 +64,14 @@ import statistics
 
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 
-def celsius_para_fahrenheit(celsius):
+# def celsius_para_fahrenheit(celsius):
 
-        fahrenheit = (celsius * 9/5) + 32
-        return fahrenheit
+#         fahrenheit = (celsius * 9/5) + 32
+#         return fahrenheit
 
-temperatura_celsius = float(input("Informe a temperatura em Celsius: "))
-temperatura_fahrenheit = celsius_para_fahrenheit(temperatura_celsius)
-print(f"{temperatura_celsius} ºC é igual a {temperatura_fahrenheit: .2f} ºF")
-
-
+# temperatura_celsius = float(input("Informe a temperatura em Celsius: "))
+# temperatura_fahrenheit = celsius_para_fahrenheit(temperatura_celsius)
+# print(f"{temperatura_celsius} ºC é igual a {temperatura_fahrenheit: .2f} ºF")
 
 
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
@@ -84,8 +82,21 @@ print(f"{temperatura_celsius} ºC é igual a {temperatura_fahrenheit: .2f} ºF")
 # #### Strings (`str`)
 
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+# mensagem = str(input("Escreva uma palavra: "))
+# maiuscula = mensagem.upper()
+# print (maiuscula)
+
+
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+# nome_completo = str(input("Digite seu nome completo: "))
+# minuscula = nome_completo.lower()
+# print (minuscula)
+
+
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
+# mensagem = str (input("Escreva uma frase: "))
+# frase = mensagem.strip()
+# print(frase)
 
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
 # data_do_usuario = input ("Insira uma data no formato dd/mm/aaaa: ")
@@ -95,10 +106,19 @@ print(f"{temperatura_celsius} ºC é igual a {temperatura_fahrenheit: .2f} ºF")
 # print(f"O ano é: {lista_de_dia_mes_ano[2]}")
 
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+# nome = str(input("Informe seu nome: "))
+# sobrenome = str(input("Informe seu sobrenome: "))
+# nome_completo = nome + sobrenome
+# print (nome_completo)
 
 # #### Booleanos (`bool`)
 
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
+# valor1 = True
+# valor2 = False
+# resultado_and = valor1 and valor2
+# print("Resultado do AND lógico:", resultado_and)
+
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
@@ -107,7 +127,36 @@ print(f"{temperatura_celsius} ºC é igual a {temperatura_fahrenheit: .2f} ºF")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+# try:
+#     celsius = float(input("Digite uma temperatura em Celsius: "))
+#     fahrenheit = (celsius * 9/5) + 32
+#     print(f"{celsius}ºC é igual a {fahrenheit}ºF.")
+# except ValueError:
+#     print("Por favor digite um numero valido para temperatura!")
+
 # 22: Verificador de Palíndromo
+
+
 # 23: Calculadora Simples
+try:
+    num1 = float(input("Digite um numero: "))
+    num2 = float(input("Digite o segundo numero: "))
+    operador = input("Digite o perador (+, -, *, /): ")
+    if operador == '+':
+        resultado = num1 + num2
+    elif operador == '-':
+        resultado = num1 - num2
+    elif operador == '*':
+        resultado = num1 * num2
+    elif operador == '/':
+        resultado = num1 / num2
+    else:
+        print("Operador invalido ou divisão por zero.")
+    print("Resultado:", resultado)
+except ValueError:
+    print("Erro. Entrada invalida. Certifique-se de inserir numeros")
+
+
+
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
